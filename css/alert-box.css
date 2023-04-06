@@ -1,0 +1,41 @@
+.alert-add {
+  transform: translate(-50%, -0);
+}
+
+.alert-remove {
+  transform: translate(-50%, -800%);
+}
+
+.alert-color-positive {
+  border-bottom: 0.5rem solid #35a772;
+  border-left: 0.5rem solid #35a772;
+  border-right: 0.5rem solid #35a772;
+  background-color: #8de29d;
+  color: #228b5a;
+  font-weight: 600;
+}
+
+.alert-color-negative {
+  border-radius: 5px;
+  border-bottom: 0.5rem solid #b63e29;
+  border-left: 0.5rem solid #b63e29;
+  border-right: 0.5rem solid #b63e29;
+  background-color: #e28d8d;
+  color: #8b2222;
+  font-weight: 600;
+}
+
+.add-answer-btn {
+  background-color: #2e67d1;
+  width: 30%;
+  border: none;
+  color: #fff;
+  padding: 0.8rem;
+  margin: 1rem 1rem 1rem 1rem;
+  font-weight: 450;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  transition: all 0.2s;
+  text-decoration: none;
+  align-self: center;
+}
