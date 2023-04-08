@@ -41,6 +41,10 @@
   align-items: center;
 }
 
+#about-header {
+  display: grid;
+}
+
 #about {
   color: #000;
   justify-self: center;
