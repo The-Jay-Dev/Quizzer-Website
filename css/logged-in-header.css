@@ -47,6 +47,7 @@ ul {
 }
 
 .menu {
+  cursor: pointer;
   height: 4rem;
   width: 4rem;
   color: black;

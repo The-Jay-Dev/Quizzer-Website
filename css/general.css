@@ -201,6 +201,7 @@ body {
   margin: 3rem 38% 3rem 38%;
   font-weight: 450;
   font-size: 1.8rem;
+  cursor: pointer;
   border-radius: 10px;
   transition: all 0.2s;
   text-decoration: none;

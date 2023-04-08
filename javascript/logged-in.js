@@ -302,6 +302,12 @@ const refreshQuizzes = function () {
           if (quiz.questions.length > 0) {
             if (quiz) {
               saveAndReturnCurrentQuiz(i);
+
+              currentUsernameSettings.current_quiz = Object.values(
+                currentUsernameSettings.quizzes
+              )[i];
+
+              saveCurrentUsernameSettings();
               window.location.href = "quizzing.html";
             } else {
               newMessage(
@@ -332,10 +338,9 @@ const refreshQuizzes = function () {
     newQuizBtn.classList.add("hidden");
   }
   //Recent Quiz text
-  if (localStorage.getItem("current_quiz")) {
-    document.querySelector("#recent-quiz").textContent = JSON.parse(
-      localStorage.getItem("current_quiz")
-    ).name;
+  if (currentUsernameSettings.current_quiz.name) {
+    document.querySelector("#recent-quiz").textContent =
+      currentUsernameSettings.current_quiz.name;
   } else {
     document.querySelector("#recent-quiz").textContent = "";
   }
@@ -572,8 +577,16 @@ const setUpEditQuiz = function (index) {
           Object.values(currentUsernameSettings.quizzes)[index].questions
             .length < 500
         ) {
-          addQuestionMC(index);
-          newMessage(true, "Added.", "timed");
+          if (checkForAnswerDuplicatesMC() === false) {
+            addQuestionMC(index);
+            newMessage(true, "Added.", "timed");
+          } else {
+            newMessage(
+              false,
+              "Duplicate answers detected. Please make sure every answer is unique and try again",
+              "timed"
+            );
+          }
         } else {
           newMessage(
             false,
@@ -702,6 +715,36 @@ const setUpEditQuiz = function (index) {
         newMessage(false, "Wrong Answer limit reached.", "timed");
       }
     });
+  }
+};
+
+//Fixes a major bug where website crashes when there are duplicate wrong answers
+const checkForAnswerDuplicatesMC = function () {
+  let returnBool;
+  const realAnswerInput = document.querySelector("#new-answer-box");
+  document.querySelectorAll(".new-answer-box").forEach((el, i) => {
+    //compare with real answer
+    if (el.value.trim() === realAnswerInput.value.trim()) {
+      returnBool = true;
+    }
+
+    document
+      .querySelectorAll(".new-answer-box")
+      .forEach((comparingEl, comparingI) => {
+        //check indexes
+        if (i !== comparingI) {
+          //compare with all answers except this one
+          if (el.value.trim() === comparingEl.value.trim()) {
+            returnBool = true;
+          }
+        }
+      });
+  });
+
+  if (returnBool === true) {
+    return true;
+  } else {
+    return false;
   }
 };
 

@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 36em) {
+@media (max-width: 40em) {
   .quiz-selection-container {
     width: 95vw;
 
@@ -95,6 +95,12 @@
 
   .create-a-quiz-container {
     width: 90% !important;
+  }
+}
+
+@media (max-width: 65em) {
+  .edit-question-container {
+    width: 80% !important;
   }
 }
 

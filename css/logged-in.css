@@ -64,6 +64,7 @@
 }
 
 .add-btn {
+  cursor: pointer;
   grid-column: 2;
   background-color: #40c057;
   width: 80%;
@@ -81,6 +82,7 @@
 }
 
 .play-now-btn {
+  cursor: pointer;
   position: relative;
   background-color: #2e67d1;
   width: 15rem;
@@ -101,6 +103,7 @@
 }
 
 .log-out-btn {
+  cursor: pointer;
   background-color: #cf2020;
   width: 15rem;
   border: none;
@@ -126,6 +129,7 @@
 }
 
 .remove-btn {
+  cursor: pointer;
   background-color: #cf2020;
   width: 80%;
   border: none;
@@ -201,16 +205,19 @@
 }
 .white-theme {
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 /* need to test blue */
 
 .gray-theme {
   background-color: #717171;
+  cursor: pointer;
 }
 
 .purple-theme {
   background-color: #862e9c;
+  cursor: pointer;
 }
 
 .theme-cs-bg {
@@ -294,6 +301,7 @@
   transition: all 0.2s;
   text-decoration: none;
   align-self: center;
+  cursor: pointer;
   z-index: 0;
 }
 
@@ -359,6 +367,7 @@
   border-radius: 10px;
   transition: all 0.2s;
   text-decoration: none;
+  cursor: pointer;
 }
 #delete-container {
   position: absolute;
@@ -381,6 +390,7 @@
 }
 
 .quiz-tab-options-edit {
+  cursor: pointer;
   background-color: #ffb300;
   color: #ffffff;
   width: 10%;
@@ -388,6 +398,7 @@
 }
 
 .quiz-tab-options-delete {
+  cursor: pointer;
   background-color: #c50000;
   color: #ffffff;
   border-bottom-right-radius: 10%;

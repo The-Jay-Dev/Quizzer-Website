@@ -297,6 +297,7 @@
 .save-btn {
   grid-column: 1;
   background-color: #c040a0;
+  cursor: pointer;
 
   width: 80%;
   border: none;
@@ -313,6 +314,7 @@
 }
 
 .return-arrow {
+  cursor: pointer;
   height: 4rem;
   width: 4rem;
   color: black;

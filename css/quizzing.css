@@ -31,10 +31,12 @@
 #check-btn {
   background-color: #40c057;
   justify-self: center;
+  cursor: pointer;
 }
 
 #next-btn {
   background-color: #2e67d1;
+  cursor: pointer;
 }
 
 #theme {
@@ -194,6 +196,7 @@
   height: 25px;
   border: 2px solid #ffb300;
   display: flex;
+  cursor: pointer;
 
   justify-content: center;
   align-items: center;
@@ -244,6 +247,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-left: 1rem;
+  padding: 2rem;
 }
 
 .theme-cs-grid button {
@@ -253,6 +257,7 @@
   width: 4rem;
   height: 4rem;
   justify-self: center;
+  cursor: pointer;
 }
 .white-theme {
   background-color: #ffffff;
