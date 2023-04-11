@@ -55,6 +55,7 @@ let randomAnswerI;
 let realAnswerRadio;
 let answerList;
 let checkBtn;
+let currentQuestionI;
 
 const result = document.querySelector("#results");
 const correctionsFlex = document.querySelector("#correction-contianer");
@@ -318,11 +319,17 @@ const rollRandomQuestion = function () {
   randomQuestionI = Math.round(
     1 + Math.random() * (currentQuizSettings.questions.length - 1)
   );
-  while (randomQuestionI > max || randomQuestionI < min) {
+  while (
+    randomQuestionI > max ||
+    randomQuestionI < min ||
+    randomQuestionI === currentQuestionI
+  ) {
     randomQuestionI = Math.round(
       1 + Math.random() * currentQuizSettings.questions.length - 1
     );
   }
+
+  currentQuestionI = randomQuestionI;
 };
 
 const nPressedCheck = function (event) {
@@ -515,8 +522,8 @@ const calculateResults = function (resultMessage) {
   result.textContent = resultMessage;
   result.classList.remove("no-opacity");
   correctionsFlex.classList.remove("no-opacity");
-  correctAnswerBox.textContent = realAnswer.join(" ");
-  yourAnswerBox.textContent = yourAnswer.join(" ");
+  correctAnswerBox.textContent = realAnswer.join("　");
+  yourAnswerBox.textContent = yourAnswer.join("　");
   answerBox.disabled = true;
 };
 
