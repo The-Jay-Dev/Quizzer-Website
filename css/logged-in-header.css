@@ -1,0 +1,64 @@
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  background-color: #fff;
+  border-bottom: 0.4rem solid #40c057;
+  box-shadow: 0 0 0.3rem #0000003d;
+  height: 6.6rem;
+  padding: 0 4.8rem;
+  z-index: 2;
+}
+
+.logo {
+  height: 42px;
+}
+
+.logo:hover,
+.logo:active {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+/* NAVIGATION */
+
+ul {
+  list-style-type: none;
+}
+
+.scale-up {
+  transition: all 0.2s;
+}
+
+.select-a-quiz {
+  margin-top: 3.2rem;
+}
+
+.main-nav-button {
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-weight: 450;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.2s;
+}
+
+.menu {
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  color: black;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+}
+
+.scale-up:hover,
+.scale-up:active {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}

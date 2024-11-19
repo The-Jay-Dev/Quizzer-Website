@@ -1,0 +1,16 @@
+{
+  "name": "quizzer-website",
+  "version": "1.0.0",
+  "description": "Quizzer App",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build *.html --dist-dir ./dist"
+  },
+  "author": "Jadon",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "sass": "^1.58.3"
+  }
+}
